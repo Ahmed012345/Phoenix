@@ -63,7 +63,7 @@ public class PullToRefreshView extends ViewGroup {
     public PullToRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RefreshView);
-        final int type = a.getInteger(R.styleable.RefreshView_type, STYLE_SUN);
+        final int typee = a.getInteger(R.styleable.RefreshView_typee, STYLE_SUN);
         a.recycle();
 
         mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
@@ -72,7 +72,7 @@ public class PullToRefreshView extends ViewGroup {
 
         mRefreshView = new ImageView(context);
 
-        setRefreshStyle(type);
+        setRefreshStyle(typee);
 
         addView(mRefreshView);
 
@@ -80,7 +80,7 @@ public class PullToRefreshView extends ViewGroup {
         ViewCompat.setChildrenDrawingOrderEnabled(this, true);
     }
 
-    public void setRefreshStyle(int type) {
+    public void setRefreshStyle(int typee) {
         setRefreshing(false);
         switch (type) {
             case STYLE_SUN:
